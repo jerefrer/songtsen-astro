@@ -12,7 +12,7 @@ import AstroPWA from "@vite-pwa/astro";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://astros.zank.studio",
+	site: "https://astro.lekshe.xyz/",
 	vite: {
 		define: {
 			__DATE__: `'${new Date().toISOString()}'`,
@@ -26,16 +26,16 @@ export default defineConfig({
 			config: {
 				backend: {
 					name: "github",
-					repo: "zankhq/astros",
+					repo: "jerefrer/songtsen-astro",
 					branch: "main",
-					base_url: "https://astros.zank.studio",
+					base_url: "https://astro.lekshe.xyz/",
 					auth_endpoint: "/api/auth",
 				},
 				media_folder: "public/images",
 				public_folder: "/images",
 				i18n: {
 					structure: "multiple_folders",
-					locales: ["en", "it"],
+					locales: ["en", "fr", "pt", "es"],
 					default_locale: "en",
 				},
 				collections: [
