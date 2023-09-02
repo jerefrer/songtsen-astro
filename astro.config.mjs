@@ -12,7 +12,7 @@ import AstroPWA from "@vite-pwa/astro";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://astro.lekshe.xyz/",
+	site: "https://astro.lekshe.xyz",
 	vite: {
 		define: {
 			__DATE__: `'${new Date().toISOString()}'`,
@@ -24,12 +24,14 @@ export default defineConfig({
 		sitemap(),
 		NetlifyCMS({
 			config: {
+				// disableIdentityWidgetInjection: true,
 				backend: {
-					name: "github",
-					repo: "jerefrer/songtsen-astro",
-					branch: "main",
-					base_url: "https://astro.lekshe.xyz/",
-					auth_endpoint: "/api/auth",
+					name: "git-gateway",
+					// name: "github",
+					// repo: "jerefrer/songtsen-astro",
+					// branch: "main",
+					// base_url: "https://astro.lekshe.xyz",
+					// auth_endpoint: "/api/auth",
 				},
 				media_folder: "public/images",
 				public_folder: "/images",
@@ -122,7 +124,6 @@ export default defineConfig({
 					},
 				],
 			},
-			disableIdentityWidgetInjection: true,
 		}),
 		astroI18next(),
 		alpinejs(),
