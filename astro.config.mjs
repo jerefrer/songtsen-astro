@@ -28,9 +28,9 @@ export default defineConfig({
 				backend: {
 					name: "git-gateway",
 					// name: "github",
-					// repo: "jerefrer/songtsen-astro",
-					// branch: "main",
-					// base_url: "https://astro.lekshe.xyz",
+					repo: "jerefrer/songtsen-astro",
+					branch: "main",
+					base_url: "https://astro.lekshe.xyz",
 					// auth_endpoint: "/api/auth",
 				},
 				media_folder: "public/images",
